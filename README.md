@@ -1,0 +1,3 @@
+techs:
+  - NuxtJs
+  - Stapi
