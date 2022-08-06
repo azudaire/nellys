@@ -1,0 +1,62 @@
+// COLORS
+
+$dark: #000000;
+$white: #fdfdfd;
+$grey: #eaeaea;
+$dark-grey: #7f7f7f;
+
+$spacer: 15px;
+
+$grid-breakpoints: (
+    'md': 768px,
+    'lg': 993px,
+    'xl': 1440px
+);
+
+
+// Mixins Breakpoints
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+    $min: map-get($breakpoints, $name);
+    @return if($min != 0, $min, null);
+  }
+  
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+    @if $min {
+      @media (min-width: $min) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  }
+  
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: local("~/assets/fonts/Helvetica\ Neue\ Medium\ Extended.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Moche';
+    src: url('~/assets/fonts/Moche-Bold.woff2') format('woff2'),
+         url('~/assets/fonts/Moche-Bold.woff') format('woff'),
+         url('~/assets/fonts/Moche-Bold.ttf') format('truetype');
+    font-display: swap;
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Moche';
+    src: url('~/assets/fonts/Moche-Regular.woff2') format('woff2'),
+         url('~/assets/fonts/Moche-Regular.woff') format('woff'),
+         url('~/assets/fonts/Moche-Regular.ttf') format('truetype');
+    font-display: swap;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Moche';
+    src: url('~/assets/fonts/Moche-Light.woff2') format('woff2'),
+         url('~/assets/fonts/Moche-Light.woff') format('woff'),
+         url('~/assets/fonts/Moche-Light.ttf') format('truetype');
+    font-display: swap;
+    font-weight: light;
+}

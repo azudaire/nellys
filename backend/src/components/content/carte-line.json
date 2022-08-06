@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_content_carte_lines",
+  "info": {
+    "displayName": "Carte line",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Nom": {
+      "type": "string"
+    },
+    "Prix": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}

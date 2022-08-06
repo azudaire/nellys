@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_content_cartes",
+  "info": {
+    "displayName": "Carte",
+    "icon": "book-open"
+  },
+  "options": {},
+  "attributes": {
+    "Plat": {
+      "displayName": "Carte line",
+      "type": "component",
+      "repeatable": true,
+      "component": "content.carte-line"
+    }
+  }
+}

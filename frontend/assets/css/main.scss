@@ -1,0 +1,92 @@
+html, body {
+    background-color: $white;
+    font-size: 10px;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+}
+p, address, a , span, dl{
+    font-size: 1.6rem;
+}
+main {
+    margin-bottom: $spacer*4 !important;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 85%;
+    @media only screen and (min-width: 993px){
+        width: 90%;
+     }
+}
+.content {
+    margin-top: $spacer *4 !important;
+    @include media-breakpoint-up(lg) {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .content__text {
+        margin-top: $spacer*4;
+        p, address {
+            margin-bottom: $spacer;
+        }
+        &--bigger {
+            font-size: 1.8rem !important;
+            font-weight: 700;
+
+        }
+    }
+}
+.heading-1 {
+    font-family: 'Moche', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 4em;
+    margin-bottom: $spacer*3;
+}
+.carte {
+    @include media-breakpoint-up(lg) {
+        max-width: 65%;
+        margin: 0 auto;
+    }
+    & > dl {
+        margin-bottom: $spacer;
+    }
+    dt, dd {
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .spec {
+        font-size: 1.6rem;
+        font-style: italic;
+        margin-bottom: $spacer;
+        font-weight: 200;
+    }
+}
+.file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .btn {
+        padding: 1.75rem 2.5rem;
+        border: 1px solid $dark;
+        border-radius: 50%;
+        transition: background-color 200ms cubic-bezier(.01,.37,.04,.83), color 200ms cubic-bezier(.01,.37,.04,.83);
+        &:hover {
+            transition: background-color 200ms cubic-bezier(.7,.16,1,.39), color 200ms cubic-bezier(.7,.16,1,.39);
+            background-color: $dark;
+            color: $white;
+        }
+    }
+}
+.socials {
+    display: flex;
+    gap: $spacer;
+}
+.horaires {
+    font-family: 'Moche';
+    font-size: 1.4rem; 
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}

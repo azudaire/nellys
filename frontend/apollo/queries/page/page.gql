@@ -1,0 +1,26 @@
+query Pages($id: ID!) {
+  page(id: $id) {
+    data {
+      id
+      attributes {
+        Slug
+        Titre
+      	Texte
+        Image {
+          data{
+            attributes {
+              url
+            }
+          }
+        }
+        Carte {
+          Plat(pagination: { limit: 100 }) {
+            Nom
+            Prix
+            Description
+          }
+        }
+      }
+    }
+  }
+}

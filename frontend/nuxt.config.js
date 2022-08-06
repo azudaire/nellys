@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'nellys',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'fr'
     },
     meta: [
       { charset: 'utf-8' },
@@ -21,10 +21,13 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/app.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/apollo/queries/page/page',
+    '~/apollo/queries/widget/widget'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -32,11 +35,13 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/apollo',
+    '@nuxtjs/markdownit',
   ],
   apollo: {
     clientConfigs: {
@@ -52,4 +57,14 @@ export default {
   env: {
     strapiBaseUri: process.env.API_URL || "http://localhost:1337"
   },
+  loading: '~/components/loader/Loader.vue',
+  image: {
+    // Options
+  },
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true
+  }
 }
